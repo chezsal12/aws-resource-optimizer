@@ -1,0 +1,51 @@
+# AWS Smart Resource Right-Sizer Configuration
+# Copy this to config.yaml and customize
+
+# Resource Scanning
+resources:
+  ec2:
+    enabled: true
+    min_age_days: 7                  # Skip resources newer than this
+
+  rds:
+    enabled: true
+    min_age_days: 7
+    exclude_aurora_serverless: true
+
+  lambda:
+    enabled: true
+    min_invocations: 1000            # Skip low-traffic functions
+
+# Exclusion Tags (resources with these tags will be skipped)
+exclude_tags:
+  - Key: "Optimizer"
+    Value: "Exclude"
+  - Key: "Environment"
+    Value: "Production"              # Optionally exclude prod
+
+# Analysis Settings
+analysis:
+  lookback_days: 30                  # Metric history window
+  confidence_threshold: 70           # Only recommend if >= 70% confidence
+
+# Amazon Bedrock Settings
+bedrock:
+  region: us-east-1
+  model_id: anthropic.claude-3-5-sonnet-20241022-v2:0
+  max_tokens: 4000
+  temperature: 0.2                   # Lower = more deterministic
+
+# Storage Settings
+storage:
+  dynamodb_table_name: optimizer-recommendations
+  s3_bucket_name: my-optimizer-reports
+
+# Alerting Settings
+alerting:
+  sns_topic_arn: arn:aws:sns:us-east-1:123456789012:optimizer-alerts
+  slack_webhook_url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+  min_total_savings: 100             # Don't alert if savings < $100/month
+
+# AWS Settings
+aws:
+  region: us-east-1
