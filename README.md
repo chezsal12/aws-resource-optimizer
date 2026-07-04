@@ -2,7 +2,7 @@
 
 **AI-Powered Resource Optimization with Amazon Bedrock**
 
-Automatically analyze CloudWatch metrics and get intelligent right-sizing recommendations for EC2, RDS, and Lambda resources using Claude 3.5 Sonnet. Stop overpaying for unused capacity.
+Automatically analyze CloudWatch metrics and get intelligent right-sizing recommendations for EC2, RDS, and Lambda resources using Claude Sonnet 4.6. Stop overpaying for unused capacity.
 
 [![License: MIT-0](https://img.shields.io/badge/License-MIT--0-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
@@ -228,7 +228,7 @@ resources:
 # Bedrock Settings
 bedrock:
   region: us-east-1
-  model_id: anthropic.claude-3-5-sonnet-20241022-v2:0
+  model_id: anthropic.claude-sonnet-4-6
   max_tokens: 4000
   temperature: 0.2
 
@@ -248,7 +248,7 @@ alerting:
 **Operating Costs (Monthly):**
 - Lambda execution (1 run/day, 5 min): ~$2
 - CloudWatch API calls (metrics retrieval): ~$10
-- Bedrock API (Claude 3.5 Sonnet): ~$15
+- Bedrock API (Claude Sonnet 4.6): ~$15
 - DynamoDB on-demand: ~$1
 - S3 storage: ~$0.50
 - **Total: ~$30/month**
@@ -315,4 +315,4 @@ This project is licensed under the MIT-0 License - see the [LICENSE](LICENSE) fi
 
 **⭐ If this project helps you save costs, give it a star!**
 
-Built with ❤️ using Amazon Bedrock (Claude 3.5 Sonnet)
+Built with ❤️ using Amazon Bedrock (Claude Sonnet 4.6)

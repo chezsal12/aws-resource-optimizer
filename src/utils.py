@@ -66,7 +66,7 @@ def load_config() -> Dict[str, Any]:
         'bedrock_region': os.environ.get('BEDROCK_REGION', 'us-east-1'),
         'bedrock_model_id': os.environ.get(
             'BEDROCK_MODEL_ID',
-            'anthropic.claude-3-5-sonnet-20241022-v2:0'
+            'anthropic.claude-sonnet-4-6'
         ),
         'max_tokens': int(os.environ.get('MAX_TOKENS', '4000')),
         'temperature': float(os.environ.get('TEMPERATURE', '0.2')),

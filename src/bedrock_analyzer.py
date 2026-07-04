@@ -1,7 +1,7 @@
 """
 Bedrock Analyzer
 
-Uses Amazon Bedrock (Claude 3.5 Sonnet) to analyze resource metrics
+Uses Amazon Bedrock (Claude Sonnet 4.6) to analyze resource metrics
 and generate intelligent right-sizing recommendations.
 """
 
@@ -32,7 +32,7 @@ class BedrockAnalyzer:
         )
         self.model_id = config.get(
             'bedrock_model_id',
-            'anthropic.claude-3-5-sonnet-20241022-v2:0'
+            'anthropic.claude-sonnet-4-6'
         )
 
     def analyze_resource(

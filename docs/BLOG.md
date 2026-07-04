@@ -8,7 +8,7 @@
 
 ## At a Glance
 
-Most AWS cost optimization tools tell you "this instance is underutilized." We built a system using Amazon Bedrock (Claude 3.5 Sonnet) that tells you "this instance averages 12% CPU with a P95 of 28%, recommend downsizing to m5.2xlarge for $280/month savings with 92% confidence." Open source, production-ready, ~$30/month to run.
+Most AWS cost optimization tools tell you "this instance is underutilized." We built a system using Amazon Bedrock (Claude Sonnet 4.6) that tells you "this instance averages 12% CPU with a P95 of 28%, recommend downsizing to m5.2xlarge for $280/month savings with 92% confidence." Open source, production-ready, ~$30/month to run.
 
 **[GitHub Repository →](https://github.com/chezsal12/aws-resource-optimizer)**
 
@@ -81,7 +81,7 @@ Lambda Orchestrator
     ├─→ CloudWatch Metrics (30-day history)
     ├─→ Compute Optimizer (AWS recommendations)
     ↓
-Amazon Bedrock (Claude 3.5 Sonnet)
+Amazon Bedrock (Claude Sonnet 4.6)
     ↓
     ├─→ Pattern analysis
     ├─→ Confidence scoring
