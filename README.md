@@ -94,6 +94,8 @@ Top 3 Recommendations:
 
 ## 🚀 Quick Start
 
+> **Using AWS Organizations?** See our [Multi-Account Deployment Guide](docs/MULTI_ACCOUNT_DEPLOYMENT.md) for cross-account optimization.
+
 ### Prerequisites
 
 - AWS Account with Bedrock enabled
