@@ -304,6 +304,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 - **Issues & Questions**: [GitHub Issues](https://github.com/chezsal12/aws-resource-optimizer/issues)
 - **AWS Support**: For production issues, contact AWS Support
+- **Author**: [Chezsal Kamaray on LinkedIn](https://www.linkedin.com/in/chezsal-kamaray-beng-hons-msc-pmp-666bb715/)
 
 ---
 
