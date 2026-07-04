@@ -30,16 +30,22 @@ EventBridge (daily) → Lambda → CloudWatch Metrics
 
 ## Module 1: Setup (10 minutes)
 
-### 1.1 Enable Amazon Bedrock
+### 1.1 Verify Amazon Bedrock Access
+
+> **Note**: As of 2026, Bedrock models are automatically enabled when first invoked. No manual activation needed!
+
+Verify you can access Bedrock:
 
 ```bash
-# Check Bedrock access
-aws bedrock get-foundation-model \
-  --model-identifier anthropic.claude-3-5-sonnet-20241022-v2:0
+# List available Claude models
+aws bedrock list-foundation-models \
+  --region us-east-1 \
+  --by-provider anthropic \
+  --query 'modelSummaries[?contains(modelId, `haiku`)].{ModelId:modelId,Name:modelName}' \
+  --output table
 ```
 
-Navigate to: https://console.aws.amazon.com/bedrock/home#/modelaccess
-- Enable **Claude 3.5 Sonnet v2**
+You should see Claude Haiku 4.5 and others. Models are ready to use!
 
 ### 1.2 Clone Repository
 
